@@ -22,7 +22,7 @@ do {
         if ($response.StatusCode -ne 200) {
             throw "Unexpected site status: $($response.StatusCode)"
         }
-        if ($response.BaseResponse.ResponseUri.Scheme -ne 'https') {
+        if ($response.BaseResponse.RequestMessage.RequestUri.Scheme -ne 'https') {
             throw 'Live policy did not resolve over HTTPS.'
         }
         if ($response.Headers['Content-Type'] -notmatch 'text/html') {
