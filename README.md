@@ -11,6 +11,12 @@ npm test
 
 The test runs structural policy checks and Playwright layout verification at desktop and true `390x844` mobile viewports. QA screenshots are written to `.qa` and excluded from Git.
 
+Verify the deployed GitHub Pages site and its dependencies with:
+
+```powershell
+.\scripts\verify-live-site.ps1
+```
+
 ## Planned GitHub Pages URL
 
 `https://midhunmonachan.github.io/scanstash-privacy/`
