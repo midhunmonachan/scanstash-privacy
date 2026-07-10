@@ -1,0 +1,14 @@
+{
+  "name": "scanstash-privacy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static privacy policy site for the ScanStash Android app.",
+  "scripts": {
+    "verify": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify-site.ps1",
+    "visual": "node ./scripts/verify-layout.mjs",
+    "test": "npm run verify && npm run visual"
+  },
+  "devDependencies": {
+    "playwright-core": "1.61.1"
+  }
+}
